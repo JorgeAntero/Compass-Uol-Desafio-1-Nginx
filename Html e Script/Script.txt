@@ -1,0 +1,23 @@
+#!/bin/bash
+
+source "~/.bashrc"
+URL="http://192.168.0.22"
+ARQUIVO_LOG="/var/log/monitoramento.log"
+
+STATUS_HTTP=$(curl -s -o /dev/null -w '%{http_code}' $URL)
+
+echo "$(date '+%Y-%m-%d %H:%M:%S') - Status: $STATUS_HTTP" >> $ARQUIVO_LOG
+
+#if [ "$STATUS_HTTP" -eq 200 ]; then
+#    echo "$(date '+%Y-%m-%d %H:%M:%S') - REGISTRO: Servidor online" >> $ARQUIVO_LOG
+#    curl -H "Content-Type: application/json" \
+#         -d '{ "content": "Servidor de Pé" }' \
+#         $BotNotf
+#fi
+
+if [ "$STATUS_HTTP" -ne 200 ]; then
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - REGISTRO: Servidor fora do ar" >> $ARQUIVO_LOG
+    curl -H "Content-Type: application/json" \
+         -d '{ "content": "Servidor fora do ar! Código: '"$STATUS_HTTP"'" }' \
+         $BotNotf
+fi

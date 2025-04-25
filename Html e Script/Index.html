@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento UOL</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="https://logospng.org/download/uol/logo-uol-icon-1024.png">
+    
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family:'Roboto Slab';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("https://storage.needpix.com/rsynced_images/background-170533_1280.jpg") no-repeat center center fixed;
+            background-size: cover;
+            filter: brightness(0.3) hue-rotate(6000deg);
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        p{
+            font-size: 1.2rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Monitoramento Ativo</h1>
+        <p>Monitorando o servidor em tempo real.</p>
+        <div class="status">
+            <img src="https://www.myqnap.org/wp-content/uploads/nginx-3628948-3030173-1.png" alt="Nginx" style="height: 80px;">
+            <img src="https://logospng.org/download/uol/logo-uol-icon-1024.png" alt="UOL" style="height: 80px;">
+        </div>
+    </div>
+</body>
+</html>
