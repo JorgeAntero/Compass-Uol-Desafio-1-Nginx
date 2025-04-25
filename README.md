@@ -89,7 +89,7 @@
         
         Mas o objetivo não é notificar quando o servidor estivesse em pé, por isso, comentei todo o if feito anteriormente, e criei um que verificava se o servidor não fosse encontrado.
 ![Décimo sétimo print](/Prints/2.1%20-%207.png)
->`if -> fi` - As diferenças entre o código que verifica quando o servidor está online são: agora o script verifica quando o código http **NÃO** é igual (-ne), e então realiza o curl, que agora mostra o `$STATUS_HTTP` em sua mensagem;
+>`if -> fi` - As diferenças entre o código que verifica quando o servidor está online são: agora o script verifica quando o código http **NÃO** é igual (`-ne`), e então realiza o curl, que agora mostra o `$STATUS_HTTP` em sua mensagem;
 
         E então, alterei o endereço ip armazenado na variável URL para fazer o teste. Sucesso:
 ![Décimo oitavo print](/Prints/2.1%20-%208.png)
