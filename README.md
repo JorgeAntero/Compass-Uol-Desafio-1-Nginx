@@ -43,7 +43,7 @@
 
 ![Sétimo print](/Prints/1.2%20-%205.png)
 
->`:r Oi.txt` - Dentro do `index.nginx-debian.html` para colar todo o conteúdo de Oi.txt lá;
+>`:r Oi.txt` - Dentro do `index.nginx-debian.html` para colar todo o conteúdo de oi.txt lá;
 
 ![Oitavo print](/Prints/1.2%20-%206.png)
 
